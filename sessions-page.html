@@ -1,0 +1,212 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="temp-builder-version" id="agenda-page">
+
+
+        <section class="background-blue no-padding-bottom section-sparse-triangles" id="hero-banner">
+
+            <div class="tabs-menu row">
+                <a class="tab-toggle col shrink current" href="#sessions">All Sessions</a>
+                <a class="tab-toggle col shrink" href="#agenda-grid">Agenda at a glance</a>
+            </div>
+
+        </section> <!-- End Agenda Hero -->
+
+        <div class="background-navy">
+            <div class="tab-content" id="sessions">
+                <section class="no-padding jp-lists" id="filter-box">
+                    <div class="row v-bottom">
+                        <div class="col">
+                            <div class="text-filter-box">
+                                <em class="fa fa-pencil jplist-icon"></em>
+
+                                <!--[if lt IE 10]>
+                                    <div class="jplist-label">Search:</div>
+                                <![endif]-->
+
+                                <input data-control-action="filter" data-control-name="title-filter" data-control-type="textbox" placeholder="Search" class="jplist-no-right-border" type="text" data-path=".session-title" />
+
+                                <!-- clear textbox button -->
+                                <em data-type="clear" class="fa fa-times-circle jplist-clear"></em>
+                            </div>
+                        </div>
+                         <div class="col">
+                            <h5 class="text-uppercase text-bold session-label">Session Type</h5>
+                            <div data-many-items-text="{num} selected" data-one-item-text="{selected}" data-no-selected-text="All sessions" data-control-action="filter" data-control-name="session-filter" data-control-type="checkbox-group-filter" class="jplist-group" id="session-filter">
+                                <ul></ul>
+                            </div>
+                        </div>
+	                    <div class="col">
+		                    <h5 class="text-uppercase text-bold theme-label">Theme</h5>
+		                    <div data-many-items-text="{num} selected" data-one-item-text="{selected}" data-no-selected-text="All Themes" data-control-action="filter" data-control-name="theme-filter" data-control-type="checkbox-group-filter" class="jplist-group" id="theme-filter">
+			                    <ul></ul>
+		                    </div>
+	                    </div>
+                        <div class="col">
+                            <h5 class="text-uppercase text-bold topic-label">Topic</h5>
+                            <div data-many-items-text="{num} selected" data-one-item-text="{selected}" data-no-selected-text="All Topics" data-control-action="filter" data-control-name="topic-filter" data-control-type="checkbox-group-filter" class="jplist-group" id="topic-filter">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-uppercase text-bold role-label">Role</h5>
+                            <div data-many-items-text="{num} selected" data-one-item-text="{selected}" data-no-selected-text="All Roles/Personas" data-control-action="filter" data-control-name="role-filter" data-control-type="checkbox-group-filter" class="jplist-group" id="role-filter">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button class="cta-button gray expand" data-control-action="reset" data-control-type="reset" data-control-name="reset" type="button">Reset</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="agenda-view background-navy" id="sessions-list">
+                    <div class="row h-left">
+                        <div class="col" id="view-options">
+                            <button class="cta-button" id="filter-btn">Filter</button>
+                        </div>
+                    </div>
+
+                    <div class="row collapse">
+                        <div class="session-browse col" id="agendaCards">
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row collapse jp-lists">
+
+                        <div data-items-per-page="15" data-control-action="paging" data-control-name="paging" data-control-type="pagination" class="jplist-pagination col">&nbsp;</div>
+                        <div class="jplist-no-results jplist-hidden">
+                            <p>No results found</p>
+                        </div>
+
+                    </div>
+
+
+                </section>
+            </div>
+
+            <!-- Agenda Bar View Tab-->
+            <div style="display: none;" class="tab-content hide-tab" id="agenda-grid">
+                <section class="background-navy">
+                    <!-- Agenda Bar View-->
+                    <div class="row compact z-1">
+                        <div class="col">
+                            <div class="agenda-bars">
+
+                                <div class="day-label">
+                                    <div class="event-day">Monday</div>
+                                    <div class="event-day">Tuesday</div>
+                                    <div class="event-day">Wednesday</div>
+                                    <div class="event-day">Thursday</div>
+                                </div>
+
+                                <div class="label-col ">
+                                    <div class="event-label">Education</div>
+                                    <div class="event-label">Expo Hall &amp; Lounge</div>
+                                    <div class="event-label">General Session</div>
+                                    <div class="event-label">Sessions &amp; Workshops</div>
+                                    <div class="event-label">Executive Forum</div>
+                                    <div class="event-label">Women’s Networking Reception</div>
+                                    <div class="event-label">Block Party</div>
+                                    <div class="event-label">Partner Forum</div>
+                                    <div class="event-label">Futures Presentation</div>
+                                    <div class="event-label">Datathon</div>
+                                </div>
+
+                                <div class="event-col">
+                                    <span title="Education" class="event-title">Education</span>
+                                    <span title="Education" class="event-title">Education</span>
+                                    <span title="Expo Hall &amp; Lounge" class="event-title">Expo Hall &amp; Lounge</span>
+                                    <span title="Continental General Session" class="event-title">General Session</span>
+                                    <span title="SessionsWorkshops" class="event-title">Sessions &amp; Workshops</span>
+                                    <span title=" Executive Forum" class="event-title">Executive Forum</span>
+                                    <span title="At the Table Panel &amp; Women’s Networking Reception" class="event-title">Women’s
+                                        Networking Reception</span>
+                                    <span title="Block Party" class="event-title">Block Party</span>
+                                    <span title="Partner Forum" class="event-title">Partner Forum</span>
+                                    <span title="Futures Presentation" class="event-title">Futures Presentation</span>
+                                    <span title="Datathon" class="event-title">Datathon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agenda Bar Mobile View-->
+                    <div class="row hide-md compact z-1">
+                        <div class="col">
+                            <div class="agenda-bars-mobile">
+
+                                <div class="day-label">
+                                    <div class="event-day">Monday</div>
+                                    <div class="event-day">Tuesday</div>
+                                    <div class="event-day">Wednesday</div>
+                                    <div class="event-day">Thursday</div>
+                                </div>
+
+                                <div class="event-col">
+                                    <span title="Education" class="event-title">Education</span>
+                                    <span title="General Session" class="event-title">General Session</span>
+                                    <span title="Expo Hall &amp; Lounge" class="event-title">Expo Hall &amp; Lounge</span>
+                                    <span title="Datathon" class="event-title">Datathon</span>
+
+                                    <span title="Sessions &amp; Workshops" class="event-title">Sessions &amp; Workshops</span>
+                                    <span title="Continental General Session" class="event-title">General Session</span>
+                                    <span title="Expo Hall &amp; Lounge" class="event-title">Expo Hall &amp; Lounge</span>
+                                    <span title="Block Party" class="event-title">Block Party</span>
+                                    <span title="Executive Forum" class="event-title">Executive Forum</span>
+                                    <span title="At the Table Panel &amp; Women’s Networking Reception" class="event-title">Women’s
+                                        Networking Reception</span>
+                                    <span title="Datathon" class="event-title">Datathon</span>
+
+                                    <span title="Sessions &amp; Workshops" class="event-title">Sessions &amp; Workshops</span>
+                                    <span title="Expo Hall &amp; Lounge" class="event-title">Expo Hall &amp; Lounge</span>
+                                    <span title="Futures Presentation" class="event-title">Futures Presentation</span>
+                                    <span title="Partner Forum" class="event-title">Partner Forum</span>
+                                    <span title="Datathon" class="event-title">Datathon</span>
+
+                                    <span title="Education" class="event-title">Education</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+    </div>
+{[E-CUSTOM TAG:AGENDA-JPLIST-SCRIPT]}
+{[E-CUSTOM TAG:AGENDA-BUILDER-SCRIPT-1]}
+{[E-CUSTOM TAG:AGENDA-BUILDER-SCRIPT-2]}
+{[E-CUSTOM TAG:AGENDA-BUILDER-SCRIPT-3]}
+
+<script type="text/javascript" src="combined.js"></script>
+
+<style>
+	    .register-btn-bottom {
+		    display: none;
+	    }
+
+	    div.bottom {
+		    padding: 0;
+	    }
+
+	    .jplist-hidden {
+		    display: none !important;
+	    }
+
+	    .tabs-menu {
+		    padding-bottom: 0px;
+	    }
+    </style>
+
+
+  </body>
+  </html>
